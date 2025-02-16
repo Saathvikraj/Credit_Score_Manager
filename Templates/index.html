@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Scoring App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Credit Scoring App</h1>
+        <form action="/predict" method="POST">
+            <label for="checking_account">Checking Account:</label>
+            <input type="text" id="checking_account" name="checking_account" required><br>
+
+            <label for="duration">Duration (months):</label>
+            <input type="number" id="duration" name="duration" required><br>
+
+            <label for="credit_history">Credit History:</label>
+            <input type="text" id="credit_history" name="credit_history" required><br>
+
+            <label for="purpose">Purpose:</label>
+            <input type="text" id="purpose" name="purpose" required><br>
+
+            <label for="credit_amount">Credit Amount:</label>
+            <input type="number" id="credit_amount" name="credit_amount" required><br>
+
+            <label for="savings_account">Savings Account:</label>
+            <input type="text" id="savings_account" name="savings_account" required><br>
+
+            <label for="employment">Employment:</label>
+            <input type="text" id="employment" name="employment" required><br>
+
+            <label for="installment_rate">Installment Rate:</label>
+            <input type="number" id="installment_rate" name="installment_rate" required><br>
+
+            <label for="personal_status">Personal Status:</label>
+            <input type="text" id="personal_status" name="personal_status" required><br>
+
+            <label for="debtors">Debtors:</label>
+            <input type="text" id="debtors" name="debtors" required><br>
+
+            <label for="residence">Residence (years):</label>
+            <input type="number" id="residence" name="residence" required><br>
+
+            <label for="property">Property:</label>
+            <input type="text" id="property" name="property" required><br>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required><br>
+
+            <label for="other_installment_plans">Other Installment Plans:</label>
+            <input type="text" id="other_installment_plans" name="other_installment_plans" required><br>
+
+            <label for="housing">Housing:</label>
+            <input type="text" id="housing" name="housing" required><br>
+
+            <label for="existing_credits">Existing Credits:</label>
+            <input type="number" id="existing_credits" name="existing_credits" required><br>
+
+            <label for="job">Job:</label>
+            <input type="text" id="job" name="job" required><br>
+
+            <label for="dependents">Dependents:</label>
+            <input type="number" id="dependents" name="dependents" required><br>
+
+            <label for="telephone">Telephone:</label>
+            <input type="text" id="telephone" name="telephone" required><br>
+
+            <label for="foreign_worker">Foreign Worker:</label>
+            <input type="text" id="foreign_worker" name="foreign_worker" required><br>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if prediction %}
+        <h2>Prediction: {{ prediction }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
