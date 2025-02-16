@@ -18,5 +18,5 @@ The Credit Scoring App is a machine learning-based application designed to predi
 ### Steps
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/credit-scoring-app.git
+   git clone https://github.com/Saathvikraj/credit-scoring-app.git
    cd credit-scoring-app
